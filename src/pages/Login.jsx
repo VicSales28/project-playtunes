@@ -37,6 +37,7 @@ class Login extends Component {
           ? <Loading />
           : (
             <form>
+
               <label htmlFor="name">
                 Nome:
                 <input
@@ -58,7 +59,8 @@ class Login extends Component {
                 Entrar
               </button>
 
-            </form>)}
+            </form>
+          )}
       </div>
     );
   }
