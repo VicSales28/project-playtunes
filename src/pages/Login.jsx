@@ -38,17 +38,15 @@ class Login extends Component {
           : (
             <form>
 
-              <label htmlFor="name">
-                Nome:
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  onChange={ this.handleChange }
-                  value={ name }
-                  data-testid="login-name-input"
-                />
-              </label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                onChange={ this.handleChange }
+                value={ name }
+                data-testid="login-name-input"
+                placeholder="Usuário"
+              />
 
               <button
                 data-testid="login-submit-button"
