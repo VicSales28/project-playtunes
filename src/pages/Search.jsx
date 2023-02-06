@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from '../components/Loading';
+import AlbumCard from '../components/AlbumCard';
 
 class Search extends Component {
   state = {
     searchIput: '',
     loading: false,
     artistSearched: '',
+    albumsList: [],
   };
 
   handleChange = ({ target: { value, name } }) => {
@@ -18,19 +20,22 @@ class Search extends Component {
 
   handleClick = async () => {
     const { searchIput } = this.state;
+    const researched = searchIput;
+    // console.log(researched);
     this.setState({
       loading: true,
     });
-    await searchAlbumsAPI({ searchIput });
+    const albums = await searchAlbumsAPI(researched);
     this.setState({
       loading: false,
       searchIput: '',
       artistSearched: searchIput,
+      albumsList: albums,
     });
   };
 
   render() {
-    const { searchIput, loading, artistSearched } = this.state;
+    const { searchIput, loading, artistSearched, albumsList } = this.state;
     const minLength = 2;
 
     return (
@@ -38,7 +43,8 @@ class Search extends Component {
 
         <Header />
 
-        { loading === true ? <Loading />
+        { loading === true
+          ? <Loading />
           : (
             <div className="search-container">
               <form>
@@ -68,6 +74,23 @@ class Search extends Component {
                   {`Resultado de álbuns de: ${artistSearched}`}
                 </p>
               )}
+
+              {albumsList.length === 0
+                ? <p>Nenhum álbum foi encontrado</p>
+                : (
+                  <div className="albums-container">
+
+                    {albumsList.map((album) => (
+                      <AlbumCard
+                        key={ album.artistId }
+                        collectionId={ album.collectionId }
+                        artistName={ album.artistName }
+                        artworkUrl100={ album.artworkUrl100 }
+                        collectionName={ album.collectionName }
+                      />))}
+
+                  </div>
+                )}
 
             </div>
           )}
