@@ -1,0 +1,32 @@
+body {
+  background-color: rgb(230, 225, 225);
+}
+
+.login_containeir {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.login_title {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-top: 80px;
+}
+
+.login_form_containeir {
+  background-color: rgb(44, 36, 41);
+  border-radius: 20px;
+  box-shadow: rgba(25, 25, 25, 0.16);
+  padding: 80px 60px;
+  top: 50%;
+  width: 600px;
+}
+
+.login_containeir form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

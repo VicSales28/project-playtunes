@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { createUser } from '../services/userAPI';
+import { FaHeadphones } from 'react-icons/fa';
+
 import Loading from '../components/Loading';
+import { createUser } from '../services/userAPI';
+import '../styles/Login.css';
 
 class Login extends Component {
   state = {
@@ -18,10 +21,13 @@ class Login extends Component {
   handleClick = async () => {
     const { name } = this.state;
     const { history: { push } } = this.props;
+
     this.setState({
       loading: true,
     });
+
     await createUser({ name });
+
     this.setState({
       loading: false,
     }, () => push('/search'));
@@ -30,35 +36,48 @@ class Login extends Component {
   render() {
     const { name, loading } = this.state;
     const minLength = 3;
+
     return (
-      <div data-testid="page-login">
+      <div className="login_containeir">
 
-        {loading === true
-          ? <Loading />
-          : (
-            <form>
+        <h1 className="login_title">
+          <FaHeadphones size="2rem" />
+          TrybeTunes
+        </h1>
 
-              <input
-                id="name"
-                type="text"
-                name="name"
-                onChange={ this.handleChange }
-                value={ name }
-                data-testid="login-name-input"
-                placeholder="Usuário"
-              />
+        <div
+          className="login_form_containeir"
+          data-testid="page-login"
+        >
 
-              <button
-                data-testid="login-submit-button"
-                type="button"
-                disabled={ name.length < minLength }
-                onClick={ this.handleClick }
-              >
-                Entrar
-              </button>
+          {loading === true
+            ? <Loading />
+            : (
+              <form>
 
-            </form>
-          )}
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  onChange={ this.handleChange }
+                  value={ name }
+                  data-testid="login-name-input"
+                  placeholder="Usuário"
+                />
+
+                <button
+                  data-testid="login-submit-button"
+                  type="button"
+                  disabled={ name.length < minLength }
+                  onClick={ this.handleClick }
+                >
+                  Entrar
+                </button>
+
+              </form>
+            )}
+        </div>
+
       </div>
     );
   }
