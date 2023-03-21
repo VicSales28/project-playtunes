@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { getUser } from '../services/userAPI';
+
 import Loading from './Loading';
+import { getUser } from '../services/userAPI';
+// import '../styles/components/Header.css';
 
 class Header extends Component {
   state = {
@@ -15,7 +17,8 @@ class Header extends Component {
 
   getUserName = async () => {
     const user = await getUser();
-    console.log(user);
+    // console.log(user);
+
     this.setState({
       userName: user.name,
       loading: false,

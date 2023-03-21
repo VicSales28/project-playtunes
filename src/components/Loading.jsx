@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import { Loader } from 'react-feather';
+
+import '../styles/components/Loading.css';
 
 class Loading extends Component {
   render() {
     return (
-      <p className="loading">Carregando...</p>
+      <h3 className="loading">
+        <Loader />
+        Carregando...
+      </h3>
     );
   }
 }

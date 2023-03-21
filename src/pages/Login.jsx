@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { FaHeadphones } from 'react-icons/fa';
 
+import Title from '../components/Title';
 import Loading from '../components/Loading';
 import { createUser } from '../services/userAPI';
 import '../styles/pages/Login.css';
@@ -40,10 +40,9 @@ class Login extends Component {
     return (
       <div className="login_containeir">
 
-        <h1 className="login_title">
-          <FaHeadphones size="2rem" />
-          TrybeTunes
-        </h1>
+        <Title
+          className="login_title"
+        />
 
         <div
           className="login_form_containeir"
