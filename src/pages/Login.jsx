@@ -4,7 +4,7 @@ import { FaHeadphones } from 'react-icons/fa';
 
 import Loading from '../components/Loading';
 import { createUser } from '../services/userAPI';
-import '../styles/Login.css';
+import '../styles/pages/Login.css';
 
 class Login extends Component {
   state = {

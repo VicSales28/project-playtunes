@@ -82,10 +82,10 @@ class Search extends Component {
 
                     {albumsList.map((album) => (
                       <AlbumCard
-                        key={ album.artistId }
+                        key={ album.collectionId }
                         collectionId={ album.collectionId }
                         artistName={ album.artistName }
-                        artworkUrl100={ album.artworkUrl100 }
+                        artUrl={ album.artworkUrl100 }
                         collectionName={ album.collectionName }
                       />))}
 
