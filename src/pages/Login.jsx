@@ -40,9 +40,7 @@ class Login extends Component {
     return (
       <div className="login_containeir">
 
-        <Title
-          className="login_title"
-        />
+        <Title />
 
         <div
           className="login_form_containeir"

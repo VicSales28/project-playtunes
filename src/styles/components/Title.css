@@ -1,0 +1,12 @@
+.title {
+  align-items: center;
+  color: rgba(103, 25, 51, 0.972);
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.title:hover {
+  color: rgba(103, 25, 51, 0.444);
+}

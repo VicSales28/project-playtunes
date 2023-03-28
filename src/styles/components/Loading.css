@@ -1,7 +1,6 @@
 .loading {
-  align-items: center;
   color: rgb(243, 245, 246);
   display: flex;
+  gap: 10px;
   justify-content: center;
-  margin: auto;
 }
