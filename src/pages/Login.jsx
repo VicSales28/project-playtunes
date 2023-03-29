@@ -60,11 +60,13 @@ class Login extends Component {
                   onChange={ this.handleChange }
                   value={ name }
                   data-testid="login-name-input"
-                  placeholder="Usuário"
+                  className="login_name_input"
+                  placeholder="Digite seu usuário"
                 />
 
                 <button
                   data-testid="login-submit-button"
+                  className="login_submit_button"
                   type="button"
                   disabled={ name.length < minLength }
                   onClick={ this.handleClick }

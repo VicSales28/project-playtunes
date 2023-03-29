@@ -1,8 +1,19 @@
 body {
   margin: 0px;
   padding: 0px;
+  font-family: Georgia;
 }
 
 a {
   text-decoration: none;
+}
+
+#root {
+  margin: 0px;
+  padding: 0px;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px rgba(142, 107, 116, 0.305) inset;
+  -webkit-text-fill-color: rgb(61, 49, 49);
 }

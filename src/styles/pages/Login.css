@@ -3,7 +3,7 @@
   background-color: rgba(103, 25, 51, 0.972);
   display: flex;
   flex-direction: column;
-  margin: 0;
+  height: 100vh;
 }
 
 .login_form_containeir {
@@ -18,4 +18,35 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.login_name_input {
+  border: rgba(130, 72, 91, 0.52) none;
+  border-radius: 12px;
+  color: rgb(58, 55, 57);
+  font-size: 14px;
+  font-weight: 600;
+  height: 30px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.login_submit_button {
+  background-color: rgba(65, 26, 39, 0.52);
+  border: rgba(130, 72, 91, 0.52) none;
+  border-radius: 12px;
+  color: rgba(242, 231, 237, 0.972);
+  cursor: pointer;
+  font-family: Epilogue , sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  height: 35px;
+  letter-spacing: 0.04em;
+  line-height: 14px;
+  text-align: center;
+  width: auto;
+}
+
+.login_submit_button:hover {
+  color: rgba(255, 255, 255, 0.518);
 }
