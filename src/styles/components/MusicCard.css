@@ -22,7 +22,7 @@
 .heart_switch {
   appearance: none;
   background-color: rgba(182, 117, 169, 0.7);
-  border: rgba(207, 190, 203, 0) none;
+  border: rgba(182, 117, 169, 0.7);
   cursor: pointer;
   height: 12px;
   position: relative;
@@ -33,7 +33,7 @@
 
 .heart_switch:before {
   background-color: rgba(182, 117, 169, 0.7);
-  border: rgba(207, 190, 203, 0) none;
+  border: rgba(182, 117, 169, 0.7);
   border-radius: 6px 6px 0 0;
   content: '';
   height: 60%;
@@ -45,7 +45,7 @@
 
 .heart_switch:after {
   background-color: rgba(182, 117, 169, 0.7);
-  border: rgba(207, 190, 203, 0) none;
+  border: rgba(182, 117, 169, 0.7);
   border-radius: 6px 6px 0 0;
   content: '';
   height: 60%;
@@ -59,8 +59,10 @@
 
 .heart_switch:checked, .heart_switch:checked:after, .heart_switch:checked:before {
   background-color: rgb(179, 48, 48);
+  border: rgba(179, 48, 48, 0.7);
 }
 
 .heart_switch:hover, .heart_switch:hover:after, .heart_switch:hover:before {
   background-color: rgba(236, 80, 80, 1);
+  border: rgba(236, 80, 80, 0.7);
 }
