@@ -1,0 +1,32 @@
+.page_not_found {
+  background-color: rgba(230, 225, 225, 0.686);
+  height: 100vh;
+}
+
+.page_instructions {
+  align-items: center;
+  color: rgba(103, 25, 51, 0.972);
+  display: flex;
+  flex-direction: column;
+  margin: 80px auto;
+}
+
+.not_found_button {
+  background-color: rgba(181, 59, 100, 0.52);
+  border: none;
+  border-radius: 23px;
+  color: rgb(248, 243, 243);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  height: 40px;
+  letter-spacing: 0.04em;
+  line-height: 14px;
+  text-align: center;
+  transition: 0.3;
+  width: 114px;
+}
+
+.not_found_button:hover {
+  color: rgba(255, 251, 251, 0.574);
+}
