@@ -2,6 +2,7 @@
   align-items: center;
   color: rgba(0, 24, 19, 1);
   display: flex;
+  font-family: Epilogue , sans-serif;
   font-size: 16px;
   gap: 16px;
   justify-content: center;
@@ -20,7 +21,7 @@
 
 .heart_switch {
   appearance: none;
-  background-color: rgb(207, 190, 203);
+  background-color: rgba(182, 117, 169, 0.7);
   border: rgba(207, 190, 203, 0) none;
   cursor: pointer;
   height: 12px;
@@ -31,7 +32,7 @@
 }
 
 .heart_switch:before {
-  background-color: rgb(207, 190, 203);
+  background-color: rgba(182, 117, 169, 0.7);
   border: rgba(207, 190, 203, 0) none;
   border-radius: 6px 6px 0 0;
   content: '';
@@ -43,7 +44,7 @@
 }
 
 .heart_switch:after {
-  background-color: rgb(207, 190, 203);
+  background-color: rgba(182, 117, 169, 0.7);
   border: rgba(207, 190, 203, 0) none;
   border-radius: 6px 6px 0 0;
   content: '';

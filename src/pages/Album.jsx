@@ -5,11 +5,13 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
+import '../styles/pages/Album.css';
 
 class Album extends Component {
   state = {
     artist: '',
     albumName: '',
+    albumImg: '',
     songsList: [],
     loading: true,
   };
@@ -25,10 +27,12 @@ class Album extends Component {
     const albumInfo = data[0];
     const artist = albumInfo.artistName;
     const albumName = albumInfo.collectionName;
+    const albumImg = albumInfo.artworkUrl100;
     this.setState(
       {
         artist,
         albumName,
+        albumImg,
         songsList: data,
         loading: false,
       },
@@ -36,19 +40,43 @@ class Album extends Component {
   };
 
   render() {
-    const { artist, albumName, songsList, loading } = this.state;
+    const { artist, albumName, albumImg, songsList, loading } = this.state;
+    const albumImage = albumImg.replace(/100x100bb.jpg/, /200x200bb.jpg/);
+
     return (
-      <div data-testid="page-album">
+      <div
+        data-testid="page-album"
+        className="page_album"
+      >
+
         <Header />
-        <div>
-          <h3 data-testid="album-name">{ albumName }</h3>
-          <h4 data-testid="artist-name">{ artist }</h4>
-        </div>
+
+        <header className="album_header">
+          <img
+            src={ albumImage }
+            alt={ albumName }
+            className="album_image"
+          />
+          <div className="album_info">
+            <h2
+              data-testid="album-name"
+              className="album_name"
+            >
+              { albumName }
+            </h2>
+            <h3
+              data-testid="artist-name"
+              className="artist"
+            >
+              { artist }
+            </h3>
+          </div>
+        </header>
 
         { loading === true
           ? <Loading />
           : (
-            <div>
+            <div className="div_songs">
 
               {songsList.map((track, index) => (
                 index > 0

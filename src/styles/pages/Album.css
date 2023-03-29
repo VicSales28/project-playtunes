@@ -1,0 +1,42 @@
+.page_album {
+
+  /* stylelint-disable-next-line max-line-length */
+  background: linear-gradient(0deg, rgba(68, 34, 24, 0.256) 0%, rgba(230, 225, 225, 0.686) 100%);
+}
+
+.album_header {
+  background-color: rgba(103, 25, 51, 0.438);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 0 auto 15px;
+  padding-bottom: 40px;
+  padding-left: 220px;
+  padding-right: auto;
+
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  padding-top: 40px;
+}
+
+.album_image {
+  border-radius: 12px;
+  height: 240px;
+  width: 240px;
+}
+
+.album_name {
+  color: rgb(65, 4, 27);
+  font-family: Epilogue , sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  height: fit-content;
+  letter-spacing: 0.8;
+  line-height: 50px;
+  text-align: left;
+  width: fit-content;
+}
+
+.artist {
+  color: rgb(65, 50, 59);
+  font-family: Epilogue , sans-serif;
+}
