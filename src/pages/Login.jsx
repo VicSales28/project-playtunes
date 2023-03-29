@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Title from '../components/Title';
 import Loading from '../components/Loading';
+import Footer from '../components/Footer';
 import { createUser } from '../services/userAPI';
 import '../styles/pages/Login.css';
 
@@ -40,12 +41,12 @@ class Login extends Component {
     return (
       <div className="login_containeir">
 
-        <Title />
-
         <div
           className="login_form_containeir"
           data-testid="page-login"
         >
+
+          <Title />
 
           {loading === true
             ? <Loading />
@@ -74,6 +75,8 @@ class Login extends Component {
               </form>
             )}
         </div>
+
+        <Footer />
 
       </div>
     );

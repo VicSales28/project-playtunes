@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+
 import Header from '../components/Header';
-import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from '../components/Loading';
 import AlbumCard from '../components/AlbumCard';
+import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import '../styles/pages/Search.css';
 
 class Search extends Component {
   state = {
@@ -21,11 +23,13 @@ class Search extends Component {
   handleClick = async () => {
     const { searchIput } = this.state;
     const researched = searchIput;
-    // console.log(researched);
+
     this.setState({
       loading: true,
     });
+
     const albums = await searchAlbumsAPI(researched);
+
     this.setState({
       loading: false,
       searchIput: '',
@@ -35,19 +39,27 @@ class Search extends Component {
   };
 
   render() {
-    const { searchIput, loading, artistSearched, albumsList } = this.state;
+    const {
+      searchIput,
+      loading,
+      artistSearched,
+      albumsList,
+    } = this.state;
     const minLength = 2;
 
     return (
-      <div data-testid="page-search">
+      <div
+        className="page_search"
+        data-testid="page-search"
+      >
 
         <Header />
 
         { loading === true
           ? <Loading />
           : (
-            <div className="search-container">
-              <form>
+            <>
+              <form className="search_form">
 
                 <input
                   id="searchInput"
@@ -56,6 +68,8 @@ class Search extends Component {
                   onChange={ this.handleChange }
                   value={ searchIput }
                   data-testid="search-artist-input"
+                  className="search_artist_input"
+                  placeholder="Nome do Artista"
                 />
 
                 <button
@@ -63,6 +77,7 @@ class Search extends Component {
                   type="button"
                   disabled={ searchIput.length < minLength }
                   onClick={ this.handleClick }
+                  className="search_artist_button"
                 >
                   Pesquisar
                 </button>
@@ -70,16 +85,15 @@ class Search extends Component {
               </form>
 
               {artistSearched && (
-                <p>
+                <h4 className="search_result">
                   {`Resultado de álbuns de: ${artistSearched}`}
-                </p>
+                </h4>
               )}
 
               {albumsList.length === 0
-                ? <p>Nenhum álbum foi encontrado</p>
+                ? <h4 className="search_result">Nenhum álbum foi encontrado</h4>
                 : (
                   <div className="albums-container">
-
                     {albumsList.map((album) => (
                       <AlbumCard
                         key={ album.collectionId }
@@ -88,11 +102,11 @@ class Search extends Component {
                         artUrl={ album.artworkUrl100 }
                         collectionName={ album.collectionName }
                       />))}
-
                   </div>
                 )}
 
-            </div>
+            </>
+
           )}
       </div>
 
