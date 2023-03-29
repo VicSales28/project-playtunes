@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Header from '../components/Header';
 import Loading from '../components/Loading';
+import EditForm from '../components/EditForm';
 import { getUser } from '../services/userAPI';
 
 class ProfileEdit extends Component {
@@ -50,77 +51,32 @@ class ProfileEdit extends Component {
   }
 
   render() {
-    const { name, email, description, image, isDisabled, loading } = this.state;
+    const {
+      name,
+      email,
+      description,
+      image,
+      isDisabled,
+      loading,
+    } = this.state;
     return (
       <div data-testid="page-profile-edit">
+
         <Header />
-        <div>
 
-          { loading === true
-            ? <Loading />
-            : (
-              <form>
+        { loading === true
+          ? <Loading />
+          : (
+            <EditForm
+              name={ name }
+              email={ email }
+              description={ description }
+              image={ image }
+              handleChange={ this.handleChange }
+              isDisabled={ isDisabled }
+            />
+          )}
 
-                <label htmlFor="userNameInput">
-                  Usuário
-                  <input
-                    id="userNameInput"
-                    type="text"
-                    name="name"
-                    value={ name }
-                    onChange={ this.handleChange }
-                    data-testid="edit-input-name"
-                  />
-                </label>
-
-                <label htmlFor="emailInput">
-                  E-mail
-                  <input
-                    id="emailInput"
-                    type="email"
-                    name="email"
-                    value={ email }
-                    onChange={ this.handleChange }
-                    data-testid="edit-input-email"
-                  />
-                </label>
-
-                <label htmlFor="descriptionInput">
-                  Descrição
-                  <input
-                    id="descriptionInput"
-                    type="text"
-                    name="description"
-                    value={ description }
-                    onChange={ this.handleChange }
-                    data-testid="edit-input-description"
-                  />
-                </label>
-
-                <label htmlFor="imageInput">
-                  Imagem
-                  <input
-                    id="imageInput"
-                    type="text"
-                    name="image"
-                    value={ image }
-                    onChange={ this.handleChange }
-                    data-testid="edit-input-image"
-                  />
-                </label>
-
-                <button
-                  type="button"
-                  data-testid="edit-button-save"
-                  className="edit_button_save"
-                  disabled={ isDisabled }
-                >
-                  Editar
-                </button>
-
-              </form>
-            )}
-        </div>
       </div>
     );
   }
