@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
+
 import Loading from './Loading';
+import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
+import '../styles/components/MusicCard.css';
 
 class MusicCard extends Component {
   state = {
@@ -32,8 +34,10 @@ class MusicCard extends Component {
     const { track } = this.props;
     const favoritesSongs = await getFavoriteSongs(track);
     // console.log(favoritesSongs);
+
     const wasFavorited = favoritesSongs.find((song) => (
       song.trackName === track.trackName));
+
     if (wasFavorited) {
       this.setState({
         isFavorite: true,
@@ -45,8 +49,10 @@ class MusicCard extends Component {
     const { track: { trackName, previewUrl, trackId } } = this.props;
     const { isFavorite, loading } = this.state;
     return (
-      <div>
-        <span>{ trackName }</span>
+      <div className="track_container">
+
+        <p className="track_name">{ trackName }</p>
+
         <audio data-testid="audio-component" src={ previewUrl } controls>
           <track kind="captions" />
           O seu navegador não suporta o elemento
@@ -55,16 +61,18 @@ class MusicCard extends Component {
           <code>audio</code>
           .
         </audio>
+
         <label data-testid={ `checkbox-music-${trackId}` } htmlFor={ trackId }>
-          Favorita
           <input
             id={ trackId }
             type="checkbox"
+            className="heart_switch"
             onChange={ this.handleCheck }
             value={ trackId }
             checked={ isFavorite }
           />
         </label>
+
         {loading && <Loading />}
       </div>
     );

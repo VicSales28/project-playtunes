@@ -1,0 +1,65 @@
+.track_container {
+  align-items: center;
+  color: rgba(0, 24, 19, 1);
+  display: flex;
+  font-size: 16px;
+  gap: 16px;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 14px;
+  padding: 12px;
+  text-align: left;
+}
+
+.track_name {
+  border-radius: nullpx;
+  height: 28px;
+  line-height: 1.2;
+  width: 280px;
+}
+
+.heart_switch {
+  appearance: none;
+  background-color: rgb(207, 190, 203);
+  border: rgba(207, 190, 203, 0) none;
+  cursor: pointer;
+  height: 12px;
+  position: relative;
+  transform: rotate(45deg);
+  transition: 0.5s;
+  width: 12px;
+}
+
+.heart_switch:before {
+  background-color: rgb(207, 190, 203);
+  border: rgba(207, 190, 203, 0) none;
+  border-radius: 6px 6px 0 0;
+  content: '';
+  height: 60%;
+  position: absolute;
+  top: -55%;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.heart_switch:after {
+  background-color: rgb(207, 190, 203);
+  border: rgba(207, 190, 203, 0) none;
+  border-radius: 6px 6px 0 0;
+  content: '';
+  height: 60%;
+  position: absolute;
+  right: 75%;
+  top: 20%;
+  transform: rotate(-90deg);
+  transition: 0.5s;
+  width: 100%;
+}
+
+.heart_switch:checked, .heart_switch:checked:after, .heart_switch:checked:before {
+  background-color: rgb(179, 48, 48);
+}
+
+.heart_switch:hover, .heart_switch:hover:after, .heart_switch:hover:before {
+  background-color: rgba(236, 80, 80, 1);
+}
