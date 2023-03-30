@@ -78,14 +78,14 @@ class ProfileEdit extends Component {
     } = this.state;
     return (
       <div
-        className="page_profile_edit"
+        className="profile"
         data-testid="page-profile-edit"
       >
 
         <Header />
 
         <div
-          className="edit_container"
+          className="profile_container"
         >
           { loading === true
             ? <Loading />

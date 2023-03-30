@@ -15,7 +15,7 @@ class EditForm extends Component {
       handleClick,
     } = this.props;
     return (
-      <form className="form_profile">
+      <form className="containeir_fields">
         <fieldset className="dados-pessoais">
 
           <legend>Dados Pessoais</legend>
