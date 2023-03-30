@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import EditForm from '../components/EditForm';
 import { getUser } from '../services/userAPI';
+import '../styles/pages/ProfileEdit.css';
 
 class ProfileEdit extends Component {
   state = {
@@ -60,22 +61,30 @@ class ProfileEdit extends Component {
       loading,
     } = this.state;
     return (
-      <div data-testid="page-profile-edit">
+      <div
+        className="page_profile_edit"
+        data-testid="page-profile-edit"
+      >
 
         <Header />
 
-        { loading === true
-          ? <Loading />
-          : (
-            <EditForm
-              name={ name }
-              email={ email }
-              description={ description }
-              image={ image }
-              handleChange={ this.handleChange }
-              isDisabled={ isDisabled }
-            />
-          )}
+        <div
+          className="edit_container"
+        >
+          { loading === true
+            ? <Loading />
+            : (
+              <EditForm
+                name={ name }
+                email={ email }
+                description={ description }
+                image={ image }
+                handleChange={ this.handleChange }
+                isDisabled={ isDisabled }
+              />
+            )}
+
+        </div>
 
       </div>
     );

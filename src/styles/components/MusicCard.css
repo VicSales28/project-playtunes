@@ -37,6 +37,7 @@
   border-radius: 6px 6px 0 0;
   content: '';
   height: 60%;
+  left: 0.5%;
   position: absolute;
   top: -55%;
   transition: 0.5s;

@@ -1,0 +1,66 @@
+.form_profile {
+  backdrop-filter: blur(10px);
+  background-color: rgba(116, 62, 79, 0.149);
+  border-radius: 16px;
+  padding: 32px;
+  width: 600px;
+}
+
+fieldset {
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+legend {
+  padding: 8px;
+}
+
+.dados-pessoais {
+  display: grid;
+  font-family: Epilogue , sans-serif;
+  gap: 8px;
+  grid-template-columns: 1fr;
+}
+
+.dados-pessoais > label {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: rgb(246, 243, 243);
+  font-size: 15px;
+  font-weight: 600;
+  height: 22px;
+  padding: 4px 6px;
+}
+
+button {
+  background-color: rgba(83, 34, 50, 0.79);
+  border: rgba(148, 71, 97, 0.52) none;
+  border-radius: 12px;
+  color: rgba(242, 231, 237, 0.972);
+  cursor: pointer;
+  font-family: Epilogue , sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  height: 35px;
+  letter-spacing: 0.04em;
+  line-height: 14px;
+  text-align: center;
+  transition: 1s;
+  width: auto;
+}
+
+button:hover {
+  background-color: rgba(65, 26, 39, 0.52);
+}
+
+button:disabled {
+  background-color: rgb(10, 9, 9);
+  cursor: not-allowed;
+  opacity: 50%;
+}
