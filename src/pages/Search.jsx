@@ -38,6 +38,12 @@ class Search extends Component {
     });
   };
 
+  handleKeyPress = async (event) => {
+    if (event.key === 'Enter') {
+      this.handleClick();
+    }
+  };
+
   render() {
     const {
       searchIput,
@@ -70,6 +76,7 @@ class Search extends Component {
                   data-testid="search-artist-input"
                   className="search_artist_input"
                   placeholder="Nome do Artista"
+                  onKeyPress={ (event) => this.handleKeyPress(event) }
                 />
 
                 <button

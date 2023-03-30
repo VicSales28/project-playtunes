@@ -34,6 +34,12 @@ class Login extends Component {
     }, () => push('/search'));
   };
 
+  handleKeyPress = async (event) => {
+    if (event.key === 'Enter') {
+      this.handleClick();
+    }
+  };
+
   render() {
     const { name, loading } = this.state;
     const minLength = 3;
@@ -62,6 +68,7 @@ class Login extends Component {
                   data-testid="login-name-input"
                   className="login_name_input"
                   placeholder="Digite seu usuário"
+                  onKeyPress={ (event) => this.handleKeyPress(event) }
                 />
 
                 <button
