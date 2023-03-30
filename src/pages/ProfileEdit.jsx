@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import EditForm from '../components/EditForm';
-import { getUser } from '../services/userAPI';
+import { getUser, updateUser } from '../services/userAPI';
 import '../styles/pages/ProfileEdit.css';
 
 class ProfileEdit extends Component {
@@ -33,6 +34,21 @@ class ProfileEdit extends Component {
     this.setState({
       [name]: value,
     }, this.toValidateInputs);
+  };
+
+  handleClick = async () => {
+    const { name, email, description, image } = this.state;
+    const { history: { push } } = this.props;
+
+    this.setState({
+      loading: true,
+    });
+
+    await updateUser({ name, email, description, image });
+
+    this.setState({
+      loading: false,
+    }, () => push('/profile'));
   };
 
   toValidateInputs() {
@@ -81,6 +97,7 @@ class ProfileEdit extends Component {
                 image={ image }
                 handleChange={ this.handleChange }
                 isDisabled={ isDisabled }
+                handleClick={ this.handleClick }
               />
             )}
 
@@ -90,5 +107,11 @@ class ProfileEdit extends Component {
     );
   }
 }
+
+ProfileEdit.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
+};
 
 export default ProfileEdit;

@@ -12,6 +12,7 @@ class EditForm extends Component {
       image,
       handleChange,
       isDisabled,
+      handleClick,
     } = this.props;
     return (
       <form className="form_profile">
@@ -71,6 +72,7 @@ class EditForm extends Component {
             data-testid="edit-button-save"
             className="edit_button_save"
             disabled={ isDisabled }
+            onClick={ handleClick }
           >
             Editar
           </button>
@@ -87,7 +89,8 @@ EditForm.propTypes = {
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
-  isDisabled: PropTypes.string.isRequired,
+  isDisabled: PropTypes.bool.isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
 
 export default EditForm;
