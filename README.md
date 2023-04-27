@@ -1,4 +1,4 @@
-# Trybetunes 🎶
+# Playtunes 🎶
 
 This project was developed while I was studying component's lifecycle and React Router at Trybe Programming School. 🎧 
 
@@ -40,13 +40,16 @@ The files created by me:
 `MusicCard.jsx`
 `AlbumHeader.jsx`
 `EditForm.jsx`
-`Footer.jsx`
-`Header.jsx`
+`SideMenu.jsx`
+`NavLinks.jsx`
 `Loading.jsx`
-`Title.jsx`
+`Breadcrumb.jsx`
 `UserHeader.jsx`
+`Footer.jsx`
 
 📁 In the `Styles` folder:
+
+Important: Logo used was downloaded from Icongeek26's FlatIcon profile.
 
 The files created by me:
 
@@ -120,6 +123,6 @@ _Give me feedbacks, I'm open to new ideas_ 😉
 
 <p align="center">
   <img
-    src="https://cdn.discordapp.com/attachments/1062029691860566078/1097587660559765615/Trybetunes_Feito_com_o_Clipchamp.gif"
+    src="https://user-images.githubusercontent.com/115190439/234960513-8a621475-a429-467d-810c-250492c96b1c.gif"
     alt="result-gif" height="320" style="border-radius:50px;">
 </p>
