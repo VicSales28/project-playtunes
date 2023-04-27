@@ -1,10 +1,10 @@
-.album_card {
+.albumstyle {
   align-items: center;
   background-color: rgb(50, 42, 47);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   padding: 20px 20px 25px;
   text-align: center;
   text-decoration: none;
@@ -12,7 +12,7 @@
   width: 240px;
 }
 
-.album_card:hover {
+.albumstyle:hover {
   background-color: rgb(62, 48, 58);
 }
 

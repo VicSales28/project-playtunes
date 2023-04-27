@@ -27,20 +27,20 @@ class UserHeader extends Component {
     const defaultImg = 'https://cdn.discordapp.com/attachments/1062029691860566078/1090289831667576852/user_318-790139.png';
 
     return (
-      <div className="user_header">
+      <>
         <img
-          className="default_user_img"
+          className="user-img rounded-circle me-2 d-none d-md-block"
           src={ image || defaultImg }
           alt="default_user_img"
         />
 
-        <h3
-          className="user_name"
+        <span
+          className="user d-none d-md-block"
           data-testid="header-user-name"
         >
           { userName }
-        </h3>
-      </div>
+        </span>
+      </>
     );
   }
 }

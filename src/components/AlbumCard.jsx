@@ -15,7 +15,7 @@ class AlbumCard extends Component {
     const image = artUrl.replace(/100x100bb.jpg/, /200x200bb.jpg/);
 
     return (
-      <div className="album-card">
+      <div className="albumstyle">
 
         <Link
           to={ `/album/${collectionId}` }

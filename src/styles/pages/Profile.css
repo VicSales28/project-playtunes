@@ -1,44 +1,6 @@
-.fieldset_profile {
-  color: rgb(32, 31, 31);
-  display: grid;
-  font-family: Epilogue , sans-serif;
-  gap: 8px;
-  grid-template-columns: 1fr 1fr;
-}
-
 .profile_img {
   border-radius: 50%;
-  width: 200px;
-}
-
-.left_container {
-  padding-left: 30px;
-  padding-top: 18px;
-}
-
-.right_container {
-  padding-right: 15px;
-  padding-top: 0;
-}
-
-.edit_button {
-  background-color: rgba(83, 34, 50, 0.79);
-  border-radius: 12px;
-  color: rgba(242, 231, 237, 0.972);
-  cursor: pointer;
-  font-family: Epilogue , sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  grid-column: 1 / -1;
-  height: 35px;
-  letter-spacing: 0.04em;
-  line-height: 14px;
-  padding: 8px;
-  text-align: center;
-  transition: 0.3s all;
-  width: auto;
-}
-
-.edit_button:hover {
-  background-color: rgba(65, 26, 39, 0.52);
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  width: 150px;
 }

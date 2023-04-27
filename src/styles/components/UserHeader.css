@@ -1,4 +1,4 @@
-.user_header {
+/* .user_header {
   align-items: center;
   background-color: rgba(163, 6, 58, 0.546);
   border-radius: 30px;
@@ -8,7 +8,7 @@
   height: 25px;
   padding: 15px 15px 15px 10px;
   width: fit-content;
-}
+} */
 
 .default_user_img {
   border-radius: 80%;
@@ -16,7 +16,7 @@
   width: 35px;
 }
 
-.user_name {
+/* .user_name {
   color: rgb(248, 245, 248);
   width: fif-content;
-}
+} */

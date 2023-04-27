@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { Loader } from 'react-feather';
-
-import '../styles/components/Loading.css';
+import { PropagateLoader } from 'react-spinners';
 
 class Loading extends Component {
   render() {
     return (
-      <h3 className="loading">
-        <Loader />
-        Carregando...
-      </h3>
+      <div align="center">
+        <PropagateLoader
+          color="rgba(35, 25, 48, 0.834)"
+          size={ 10 }
+        />
+      </div>
     );
   }
 }

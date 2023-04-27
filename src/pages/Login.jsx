@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
-import Title from '../components/Title';
 import Loading from '../components/Loading';
 import Footer from '../components/Footer';
+import logo from '../images/logo.png';
 import { createUser } from '../services/userAPI';
 import '../styles/pages/Login.css';
 
@@ -45,48 +47,62 @@ class Login extends Component {
     const minLength = 3;
 
     return (
-      <div className="login_containeir">
+      <div className="b-vr">
 
         <div
-          className="login_form_containeir"
+          className="containeir"
           data-testid="page-login"
         >
 
-          <Title />
+          <div className="row justify-content-center align-items-center dashboard">
 
-          {loading === true
-            ? <Loading />
-            : (
-              <form>
+            {loading === true
+              ? <Loading />
+              : (
+                <form className="col-10 col-md-4 rounded-3 login-container p-5">
 
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  onChange={ this.handleChange }
-                  value={ name }
-                  data-testid="login-name-input"
-                  className="login_name_input"
-                  placeholder="Digite seu usuário"
-                  onKeyPress={ (event) => this.handleKeyPress(event) }
-                />
+                  <div
+                    className="row justify-content-center align-items-center text-center"
+                  >
 
-                <button
-                  data-testid="login-submit-button"
-                  className="login_submit_button"
-                  type="button"
-                  disabled={ name.length < minLength }
-                  onClick={ this.handleClick }
-                >
-                  Entrar
-                </button>
+                    <img src={ logo } className="logo me-3" alt="Logo" />
+                    <span className="fs-3 fw-bold title">
+                      PlayTunes
+                    </span>
 
-              </form>
-            )}
+                    <div className="input-group my-4">
+                      <span className="input-group-text usericon">
+                        <FontAwesomeIcon icon={ faUser } />
+                      </span>
+                      <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        onChange={ this.handleChange }
+                        value={ name }
+                        data-testid="login-name-input"
+                        className="form-control input"
+                        placeholder="Digite um nome de usuário"
+                        onKeyPress={ (event) => this.handleKeyPress(event) }
+                      />
+                    </div>
+
+                    <button
+                      data-testid="login-submit-button"
+                      className="btn btn-success submit mt-2"
+                      type="button"
+                      disabled={ name.length < minLength }
+                      onClick={ this.handleClick }
+                    >
+                      Entrar
+                    </button>
+
+                  </div>
+                </form>
+              )}
+          </div>
         </div>
-
         <Footer />
-
       </div>
     );
   }

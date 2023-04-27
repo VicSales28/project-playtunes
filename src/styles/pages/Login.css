@@ -1,52 +1,43 @@
-.login_containeir {
-  align-items: center;
-  background-color: rgba(103, 25, 51, 0.972);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+.login-container {
+  background: rgba(35, 25, 48, 0.974);
+  box-shadow: rgb(38, 57, 77) 0 20px 30px -10px;
+  margin-top: 8rem;
 }
 
-.login_form_containeir {
-  background-color: rgb(230, 225, 225);
-  border-radius: 20px;
-  margin: 150px auto;
-  padding: 60px;
-  width: 500px;
+.title {
+  color: rgb(215, 214, 218);
 }
 
-.login_containeir form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.logo {
+  max-width: 4.5rem;
 }
 
-.login_name_input {
-  border: rgba(130, 72, 91, 0.52) none;
-  border-radius: 12px;
-  color: rgb(58, 55, 57);
-  font-size: 14px;
-  font-weight: 600;
-  height: 30px;
-  letter-spacing: 0.04em;
-  text-align: center;
+.usericon {
+  background: rgb(47, 193, 140);
+  border: 3px solid rgb(47, 193, 140);
+  color: white;
 }
 
-.login_submit_button {
-  background-color: rgba(65, 26, 39, 0.52);
-  border: rgba(130, 72, 91, 0.52) none;
-  border-radius: 12px;
-  color: rgba(242, 231, 237, 0.972);
-  cursor: pointer;
-  font-family: Epilogue , sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  height: 35px;
-  letter-spacing: 0.04em;
-  line-height: 14px;
-  text-align: center;
-  width: auto;
+.input {
+  border: 3px solid rgb(204, 204, 204);
 }
 
-.login_submit_button:hover {
-  color: rgba(255, 255, 255, 0.518);
+.input:focus {
+  border: 3px solid rgb(62, 218, 161);
+  transition: all 1s;
+}
+
+.input-search {
+  border: 3px solid rgb(204, 204, 204);
+  max-width: 300px;
+}
+
+.input-search:focus {
+  border: 3px solid rgb(47, 193, 140);
+  transition: all 1s;
+}
+
+.submit {
+  background-color: rgb(45, 182, 132);
+  width: 80%;
 }

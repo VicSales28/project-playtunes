@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Header from '../components/Header';
+import SideMenu from '../components/SideMenu';
+import Breadcrumb from '../components/Breadcrumb';
 import Loading from '../components/Loading';
 import EditForm from '../components/EditForm';
 import { getUser, updateUser } from '../services/userAPI';
-import '../styles/pages/ProfileEdit.css';
 
 class ProfileEdit extends Component {
   state = {
@@ -78,29 +78,37 @@ class ProfileEdit extends Component {
     } = this.state;
     return (
       <div
-        className="profile"
         data-testid="page-profile-edit"
       >
-
-        <Header />
-
+        <SideMenu />
         <div
-          className="profile_container"
+          className="container-page"
         >
-          { loading === true
-            ? <Loading />
-            : (
-              <EditForm
-                name={ name }
-                email={ email }
-                description={ description }
-                image={ image }
-                handleChange={ this.handleChange }
-                isDisabled={ isDisabled }
-                handleClick={ this.handleClick }
-              />
-            )}
+          <div className="row justify-content-center align-items-center mt-3">
+            <div className="col-12 col-md-8">
+              <Breadcrumb route="Editar perfil" />
+              <hr />
 
+              <div
+                className="d-flex flex-column align-items-center text-center field"
+              >
+                { loading === true
+                  ? <Loading />
+                  : (
+                    <EditForm
+                      name={ name }
+                      email={ email }
+                      description={ description }
+                      image={ image }
+                      handleChange={ this.handleChange }
+                      isDisabled={ isDisabled }
+                      handleClick={ this.handleClick }
+                    />
+                  )}
+
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>

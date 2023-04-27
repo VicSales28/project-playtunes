@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Header from '../components/Header';
+import SideMenu from '../components/SideMenu';
+import Breadcrumb from '../components/Breadcrumb';
 import AlbumHeader from '../components/AlbumHeader';
 import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
-import '../styles/pages/Album.css';
 
 class Album extends Component {
   state = {
@@ -47,33 +47,42 @@ class Album extends Component {
     return (
       <div
         data-testid="page-album"
-        className="page_album"
       >
 
-        <Header />
+        <SideMenu />
+        <div
+          className="container-page"
+          data-testid="page-search"
+        >
+          <div className="row justify-content-center align-items-center mt-3">
+            <div className="col-12 col-md-8">
+              <Breadcrumb route="Álbum selecionado" />
+              <hr />
 
-        <AlbumHeader
-          albumImage={ albumImage }
-          albumName={ albumName }
-          artist={ artist }
-        />
+              <AlbumHeader
+                albumImage={ albumImage }
+                albumName={ albumName }
+                artist={ artist }
+              />
 
-        { loading === true
-          ? <Loading />
-          : (
-            <div className="div_songs">
+              { loading === true
+                ? <Loading />
+                : (
+                  <div className="div_songs">
 
-              {songsList.map((track, index) => (
-                index > 0
+                    {songsList.map((track, index) => (
+                      index > 0
                 && <MusicCard
                   key={ track.trackId }
                   track={ track }
                 />
-              ))}
+                    ))}
 
+                  </div>
+                )}
             </div>
-          )}
-
+          </div>
+        </div>
       </div>
     );
   }

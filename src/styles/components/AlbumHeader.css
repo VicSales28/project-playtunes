@@ -1,16 +1,11 @@
 .album_header {
-
-  /* stylelint-disable-next-line max-line-length */
-  background: linear-gradient(0deg, rgba(68, 34, 24, 0.256) 0%, rgba(230, 225, 225, 0.15) 100%);
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
+  justify-content: center;
   margin: 0 auto 15px;
   padding-bottom: 40px;
-  padding-left: 220px;
   padding-right: auto;
-
-  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
   padding-top: 40px;
 }
 

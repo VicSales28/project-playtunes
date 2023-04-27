@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import '../styles/components/EditForm.css';
-
 class EditForm extends Component {
   render() {
     const {
@@ -15,10 +13,10 @@ class EditForm extends Component {
       handleClick,
     } = this.props;
     return (
-      <form className="containeir_fields">
-        <fieldset className="dados-pessoais">
+      <form className="d-flex flex-column align-items-center text-center field">
+        <fieldset>
 
-          <legend>Dados Pessoais</legend>
+          <legend>Editar dados pessoais</legend>
 
           <label htmlFor="userNameInput">
             Usuário
@@ -29,6 +27,7 @@ class EditForm extends Component {
               value={ name }
               onChange={ handleChange }
               data-testid="edit-input-name"
+              className="form-control input"
             />
           </label>
 
@@ -41,6 +40,7 @@ class EditForm extends Component {
               value={ email }
               onChange={ handleChange }
               data-testid="edit-input-email"
+              className="form-control input"
             />
           </label>
 
@@ -52,6 +52,7 @@ class EditForm extends Component {
               value={ description }
               onChange={ handleChange }
               data-testid="edit-input-description"
+              className="form-control input"
             />
           </label>
 
@@ -64,13 +65,14 @@ class EditForm extends Component {
               value={ image }
               onChange={ handleChange }
               data-testid="edit-input-image"
+              className="form-control input"
             />
           </label>
 
           <button
             type="button"
             data-testid="edit-button-save"
-            className="edit_button_save"
+            className="btn btn-success w-50 submit mt-2"
             disabled={ isDisabled }
             onClick={ handleClick }
           >

@@ -1,0 +1,36 @@
+.sidebar {
+  background-color: rgb(35, 25, 48);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 280px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  background-color: rgb(181, 47, 193);
+}
+
+
+hr {
+  border-top: 2px solid #c12fae;
+}
+
+.logo {
+  max-height: 50px;
+}
+
+.title {
+  color: rgb(215, 214, 218);
+  font-weight: 700;
+}
+
+.user-img {
+  height: 32px;
+  opacity: 0.8;
+  width: 32px;
+}

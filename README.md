@@ -94,7 +94,7 @@ To run them locally, run the commands below:
   <summary><strong>🖥️ To access</strong></summary><br />
 
 1 - Clone the repository:
-`git clone git@github.com:VicSales28/project-trybetunes.git`
+`git clone git@github.com:VicSales28/project-playtunes.git`
 
 2 - Enter the repository folder you just cloned.
 
