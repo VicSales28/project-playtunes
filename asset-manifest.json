@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/project-trybetunes/static/css/main.2a19c618.css",
-    "main.js": "/project-trybetunes/static/js/main.2eb77275.js",
-    "index.html": "/project-trybetunes/index.html",
-    "main.2a19c618.css.map": "/project-trybetunes/static/css/main.2a19c618.css.map",
-    "main.2eb77275.js.map": "/project-trybetunes/static/js/main.2eb77275.js.map"
+    "main.css": "/project-playtunes/static/css/main.2e80f124.css",
+    "main.js": "/project-playtunes/static/js/main.1ce1612b.js",
+    "static/media/logo.png": "/project-playtunes/static/media/logo.6a1239fe55c40192ec0e.png",
+    "index.html": "/project-playtunes/index.html",
+    "main.2e80f124.css.map": "/project-playtunes/static/css/main.2e80f124.css.map",
+    "main.1ce1612b.js.map": "/project-playtunes/static/js/main.1ce1612b.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a19c618.css",
-    "static/js/main.2eb77275.js"
+    "static/css/main.2e80f124.css",
+    "static/js/main.1ce1612b.js"
   ]
 }
